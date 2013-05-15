@@ -22,7 +22,7 @@
 					//2. 获取数据库连接
 					$link = @mysql_connect(HOST,USER,PASS) or die("数据库连接失败！");
 					mysql_select_db(DBNAME,$link);
-					mysql_query("set names utf8");
+					mysql_query("set names utf8");//将数据库编码设置为UTF-8
 					
 					//3. 实现数据的查询
 					$sql = "select * from type order by concat(path,id)";
