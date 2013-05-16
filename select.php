@@ -25,8 +25,8 @@
 				
 				//4. 遍历解析输出内容
 				while($row = mysql_fetch_assoc($result)){
-					$m=substr_count($row['path'],",")-1;
-					$strpad = str_pad("",$m*6*2,"&nbsp;");
+					$m=substr_count($row['path'],",")-1;			//计算子串在字符串中出现的次数
+					$strpad = str_pad("",$m*6*2,"&nbsp;");			//把字符串填充为指定的长度
 					if($row['pid']==0){
 						$dbd = "disabled";
 					}else{

@@ -35,8 +35,8 @@
 						echo "<td>{$row['name']}</td>";
 						echo "<td>{$row['pid']}</td>";
 						echo "<td>{$row['path']}</td>";
-						echo "<td><a href='add.php?pid={$row['id']}&name={$row['name']}&path={$row['path']}{$row['id']},'>添加子类</a>
-								<a href='action.php?action=del&id={$row['id']}'>删除</a>
+						echo "<td><a href='add.php?pid={$row['id']}&name={$row['name']}&path={$row['path']}{$row['id']},'>添加子类</a>    ";
+												echo "<a href='action.php?action=del&id={$row['id']}' onclick=\"return confirm('确定要删除{$row['name']}吗?');\">删除</a>
 							</td>";
 						echo "</tr>";
 					}
